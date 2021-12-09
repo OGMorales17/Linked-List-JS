@@ -18,17 +18,6 @@ class LinkedList {
     for (let val of vals) this.push(val);
   }
 
-
-  // getVal(idx) {
-  //   let cur = this.head;
-  //   let count = 0;
-
-  //   while (cur !== null && cur !== idx) {
-  //     count += 1;
-  //     cur = cur.next;
-  //   }
-  //   return cur;
-  // }
   getVal(idx) {
     let cur = this.head;
     let count = 0;
@@ -100,23 +89,6 @@ class LinkedList {
 
   /** insertAt(idx, val): add node w/val before idx. */
 
-  // insertAt(idx, val) {
-  //   if (idx > this.length || idx < 0) {
-  //     throw new Error("Invalid index.");
-  //   }
-
-  //   if (idx === 0) return this.unshift(val);
-  //   if (idx === this.length) return this.push(val);
-
-  //   // get the one before it
-  //   let prev = this.getVal(idx - 1);
-
-  //   let newNode = new Node(val);
-  //   newNode.next = prev.next;
-  //   prev.next = newNode;
-
-  //   this.length += 1;
-  // }
   insertAt(idx, val) {
     if (idx > this.length || idx < 0) {
       throw new Error("Invalid index.");
@@ -156,13 +128,6 @@ class LinkedList {
 
     // special case: remove tail
 
-    // if (idx === this.length - 1) {
-    //   let val = prev.next.val;
-    //   prev.next = null;
-    //   this.tail = prev;
-    //   this.length -= 1;
-    //   return val;
-    // }
     if (idx === this.length - 1) {
       let val = prev.next.val;
       prev.next = null;
